@@ -6,18 +6,26 @@
   <title>Habitta Co</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <!-- Fonts & Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span><i class="fas fa-envelope"></i> info@habittaco.com</span>
+      <span><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</span>
+    </div>
+  </div>
+
   <!-- HEADER -->
   <header class="header">
     <div class="container nav">
       <div class="logo">
-        <img src="images/logo.png" alt="Habitta" />
+        <img src="images/Logo-Habitta-para-WEB-1.png" alt="Habitta Co" />
       </div>
 
       <nav>
@@ -25,18 +33,19 @@
           <li><a href="#">Inicio</a></li>
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#services">Servicios</a></li>
+          <li><a href="#admin">Administración</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
 
-      <a href="#" class="btn-primary">+57 320 746 2217</a>
+      <a href="tel:+573207462217" class="btn-primary">+57 320 746 2217</a>
     </div>
   </header>
 
   <!-- HERO / SLIDER -->
   <section class="hero">
     <div class="slider">
-      <div class="slide active" style="background-image: url('images/slide1.jpg');">
+      <div class="slide active" style="background-image: url('images/slider/slider-bg.jpg');">
         <div class="overlay">
           <h4>HABITTA CO.</h4>
           <h1>Asesoría en <span>Financiamiento</span></h1>
@@ -44,11 +53,32 @@
         </div>
       </div>
 
-      <div class="slide" style="background-image: url('images/slide2.jpg');">
+      <div class="slide" style="background-image: url('images/slider/slider-construct-bg2.jpg');">
         <div class="overlay">
+          <h4>HABITTA CO.</h4>
           <h1>Proyectos de <span>Construcción</span></h1>
+          <p>Construimos el futuro que tu familia merece.</p>
         </div>
       </div>
+
+      <div class="slide" style="background-image: url('images/slider/slider-factory-bg2.jpg');">
+        <div class="overlay">
+          <h4>HABITTA CO.</h4>
+          <h1>Soluciones <span>Inmobiliarias</span></h1>
+          <p>Tu aliado estratégico en el sector inmobiliario.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flechas del slider -->
+    <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+
+    <!-- Dots -->
+    <div class="slider-dots">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
     </div>
   </section>
 
@@ -58,19 +88,25 @@
       <h2>HABITTA CO INMOBILIARIA SAS</h2>
       <p>
         Empresa que brinda soluciones integrales en materia inmobiliaria y construcción.
+        Contamos con un equipo de profesionales comprometidos con entregar proyectos de
+        alta calidad, cumpliendo siempre con los estándares del sector.
       </p>
-      <a href="#" class="btn-secondary">Acerca de nosotros</a>
+      <p>
+        Nuestro enfoque está en acompañar a nuestros clientes en cada etapa del proceso,
+        desde el diseño hasta la entrega final, garantizando transparencia y confianza.
+      </p>
+      <a href="#contact" class="btn-secondary">Acerca de nosotros</a>
     </div>
 
     <div class="about-images">
-      <img src="images/about1.jpg" />
-      <img src="images/about2.jpg" />
+      <img src="images/Foto-Para-Pagina-Habitta.png" alt="Equipo Habitta" />
+      <img src="images/Foto-2-PAgina-Habitta.png" alt="Construcción Habitta" />
     </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services" class="services">
-    <div class="container grid">
+    <div class="container services-grid">
       <div class="service">
         <i class="fas fa-drafting-compass"></i>
         <p>Diseño y construcción</p>
@@ -83,30 +119,88 @@
         <i class="fas fa-city"></i>
         <p>Urbanismo</p>
       </div>
+      <div class="service">
+        <i class="fas fa-map"></i>
+        <p>Levantamiento tópico</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-clipboard-list"></i>
+        <p>Inventarios de proyectos</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-tasks"></i>
+        <p>Gerencia de proyectos</p>
+      </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CTA BANNER -->
   <section class="cta">
-    <div class="container">
-      <p>¡Te invitamos a conocer NOVAYANNA!</p>
-      <a href="#" class="btn-primary">Ver sitio web</a>
+    <div class="container cta-inner">
+      <p>¡Te invitamos a conocer <strong>NOVAYANNA</strong>, un paraíso de oportunidades!</p>
+      <a href="#" class="btn-dark">Ver sitio web</a>
+    </div>
+  </section>
+
+  <!-- ADMINISTRACIÓN INMOBILIARIA -->
+  <section id="admin" class="admin container">
+    <div class="admin-image">
+      <img src="images/slider-handy-bg2.jpg" alt="Administración Inmobiliaria" />
+    </div>
+    <div class="admin-text">
+      <h2>Administración<br>Inmobiliaria</h2>
+      <p>
+        Ofrecemos servicios integrales de administración inmobiliaria para propietarios
+        e inversionistas que desean maximizar el valor de sus activos.
+      </p>
+      <ul class="check-list">
+        <li><i class="fas fa-check-circle"></i> Gestión de arriendos</li>
+        <li><i class="fas fa-check-circle"></i> Mantenimiento y reparaciones</li>
+        <li><i class="fas fa-check-circle"></i> Asesoría jurídica inmobiliaria</li>
+        <li><i class="fas fa-check-circle"></i> Valoración de inmuebles</li>
+      </ul>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Contáctenos</h2>
-      <p>Déjanos tus datos y te contactaremos.</p>
-      <a href="#" class="btn-primary">Contactar</a>
+      <h2>Contáctenos para asesorarle</h2>
+      <p>Déjanos tus datos y te contactaremos a la brevedad posible.</p>
+      <a href="tel:+573207462217" class="btn-primary">Contáctanos</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Habitta Co</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/Logo-Habittaco-pequeno.png" alt="Habitta Co" />
+        <p>Soluciones integrales en el sector inmobiliario y de construcción.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</li>
+          <li><i class="fas fa-phone"></i> +57 320 746 2217</li>
+          <li><i class="fas fa-envelope"></i> info@habittaco.com</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#services">Diseño y construcción</a></li>
+          <li><a href="#services">Movimientos de tierra</a></li>
+          <li><a href="#services">Urbanismo</a></li>
+          <li><a href="#admin">Administración Inmobiliaria</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Habitta Co Inmobiliaria SAS. Todos los derechos reservados.</p>
     </div>
   </footer>
 
