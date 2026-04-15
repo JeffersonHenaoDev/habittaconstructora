@@ -1,774 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitta Co Inmobiliaria SAS - Soluciones Integrales</title>
-    <meta name="description" content="Habitta Co. brinda soluciones integrales de alta calidad en materia inmobiliaria y de construcción en Colombia.">
-    <link rel="icon" href="images/Logo-Favicon-Habittaco.png" type="image/png">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-    <!-- Revolution Slider 6.2.23 -->
-    <link rel="stylesheet" href="css/vendor/rs6.css">
-    <!-- Estilos propios -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- jQuery + Revolution Slider JS (deben cargar antes del markup del slider) -->
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/rbtools.min.js"></script>
-    <script src="js/vendor/rs6.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habitta Co</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- =========================================================
-         FLOATING BUTTONS
-    ========================================================= -->
-    <div class="floating-actions">
-        <a href="https://wa.me/573207462217" target="_blank" rel="noopener" class="fab-btn fab-whatsapp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:+573207462217" class="fab-btn fab-phone" aria-label="Llamar">
-            <i class="fas fa-phone"></i>
-        </a>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">
+        <img src="images/logo.png" alt="Habitta" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn-primary">+57 320 746 2217</a>
+    </div>
+  </header>
+
+  <!-- HERO / SLIDER -->
+  <section class="hero">
+    <div class="slider">
+      <div class="slide active" style="background-image: url('images/slide1.jpg');">
+        <div class="overlay">
+          <h4>HABITTA CO.</h4>
+          <h1>Asesoría en <span>Financiamiento</span></h1>
+          <p>Brindamos soluciones integrales en materia inmobiliaria y construcción.</p>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('images/slide2.jpg');">
+        <div class="overlay">
+          <h1>Proyectos de <span>Construcción</span></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <div class="about-text">
+      <h2>HABITTA CO INMOBILIARIA SAS</h2>
+      <p>
+        Empresa que brinda soluciones integrales en materia inmobiliaria y construcción.
+      </p>
+      <a href="#" class="btn-secondary">Acerca de nosotros</a>
     </div>
 
-    <!-- =========================================================
-         HEADER
-    ========================================================= -->
-    <header id="header">
-        <!-- Top bar -->
-        <div class="top-bar">
-            <div class="container">
-                <div class="top-bar-inner">
-                    <div class="top-bar-left">
-                        <a href="tel:+573207462217">
-                            <i class="fas fa-phone-alt"></i>
-                            (+57) 320 746 2217
-                        </a>
-                        <a href="mailto:comercial@habittaconstructora.com">
-                            <i class="fas fa-envelope"></i>
-                            comercial@habittaconstructora.com
-                        </a>
-                    </div>
-                    <div class="top-bar-right">
-                        <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://wa.me/573207462217" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-inner">
-                    <a href="#inicio" class="logo">
-                        <img src="images/Logo-Habittaco-pequeno.png" alt="Habitta Co." class="logo-icon">
-                        <span class="logo-text">Habitta <span class="logo-accent">Co.</span></span>
-                    </a>
-
-                    <ul class="nav-menu" id="nav-menu" role="list">
-                        <li><a href="#inicio"    class="nav-link active">Inicio</a></li>
-                        <li><a href="#nosotros"  class="nav-link">Nosotros</a></li>
-                        <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                        <li><a href="#contacto"  class="nav-link nav-cta">Contáctenos</a></li>
-                    </ul>
-
-                    <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- =========================================================
-         REVOLUTION SLIDER 6.2.23
-    ========================================================= -->
-    <section id="inicio">
-        <p class="rs-p-wp-fix"></p>
-        <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery"
-            style="background:#030f27;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
-            <rs-module id="rev_slider_1_1" style="" data-version="6.2.23">
-                <rs-slides>
-
-                    <!-- SLIDE 1 - Interventoría de Proyectos -->
-                    <rs-slide data-key="rs-1" data-title="interventoria"
-                        data-anim="ei:d;eo:d;s:d;r:0;t:curtain-1;sl:d;">
-                        <img src="images/slider-factory-bg2.jpg"
-                            title="slider-factory-bg2" width="1920" height="935"
-                            data-parallax="off" class="rev-slidebg" data-no-retina>
-                        <!--
-                        --><rs-layer
-                            id="slider-1-slide-1-layer-33"
-                            data-type="text"
-                            data-color="#cacaca"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;xo:-2px,0,0,0;y:m;yo:-137px,-254px,-285px,-245px;"
-                            data-text="s:16,16,18,18;l:25,25,25,24;fw:600;a:inherit;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="sp:400;sR:10;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:5;font-family:Poppins;"
-                        >HABITTA CO.
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-1-layer-24"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;xo:-1px,0,0,0;y:m;yo:-93px,-181px,-223px,-181px;"
-                            data-text="s:53,70,62,38;l:61,80,70,46;ls:0,0px,0px,0px;a:left,left,center,left;"
-                            data-dim="w:auto,auto,720px,auto;"
-                            data-frame_0="y:38px;"
-                            data-frame_1="st:320;sp:400;sR:320;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:6;font-family:Poppins;"
-                        >Interventoría
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-1-layer-35"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;y:m;yo:-25px,-81px,-128px,-115px;"
-                            data-text="s:70,70,62,38;l:80,80,70,46;fw:600;a:left,left,center,left;"
-                            data-dim="w:auto,auto,720px,auto;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="st:660;sp:400;sR:660;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:7;font-family:Poppins;"
-                        >de Proyectos
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-1-layer-8"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;y:m;yo:82px,20px,-12px,-10px;"
-                            data-text="w:normal;s:22,22,22,20;l:36,36,36,35;fw:400,500,500,500;a:left,left,center,center;"
-                            data-dim="w:680px,857px,650px,450px;h:93px,auto,auto,auto;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="st:1000;sp:400;sR:1000;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:8;font-family:Poppins;"
-                        >Brindamos soluciones integrales de alta calidad en materia inmobiliaria y de construcción.
-                        </rs-layer><!--
-                        -->
-                    </rs-slide>
-
-                    <!-- SLIDE 2 - Diseño y construcción de vías -->
-                    <rs-slide data-key="rs-4" data-title="diseño vias"
-                        data-anim="ei:d;eo:d;s:d;r:0;t:curtain-1;sl:d;">
-                        <img src="images/slider-construct-bg2.jpg"
-                            title="slider-construct-bg2" width="1920" height="1080"
-                            data-parallax="off" class="rev-slidebg" data-no-retina>
-                        <!--
-                        --><rs-layer
-                            id="slider-1-slide-4-layer-33"
-                            data-type="text"
-                            data-color="#cacaca"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;xo:-2px,0,0,0;y:m;yo:-137px,-254px,-285px,-245px;"
-                            data-text="s:16,16,18,18;l:25,25,25,24;fw:600;a:inherit;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="sp:400;sR:10;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:5;font-family:Poppins;"
-                        >HABITTA CO.
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-4-layer-24"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;xo:-1px,0,0,0;y:m;yo:-93px,-181px,-223px,-181px;"
-                            data-text="s:53,70,62,38;l:61,80,70,46;ls:0,0px,0px,0px;a:left,left,center,left;"
-                            data-dim="w:auto,auto,720px,auto;"
-                            data-frame_0="y:38px;"
-                            data-frame_1="st:320;sp:400;sR:320;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:6;font-family:Poppins;"
-                        >Diseño y construcción
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-4-layer-35"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;y:m;yo:-25px,-81px,-128px,-115px;"
-                            data-text="s:70,70,62,38;l:80,80,70,46;fw:600;a:left,left,center,left;"
-                            data-dim="w:auto,auto,720px,auto;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="st:660;sp:400;sR:660;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:7;font-family:Poppins;"
-                        >de vías y parcelaciones
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-4-layer-8"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;y:m;yo:82px,20px,-12px,-10px;"
-                            data-text="w:normal;s:22,22,22,20;l:36,36,36,35;fw:400,500,500,500;a:left,left,center,center;"
-                            data-dim="w:680px,857px,650px,450px;h:93px,auto,auto,auto;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="st:1000;sp:400;sR:1000;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:8;font-family:Poppins;"
-                        >Brindamos soluciones integrales de alta calidad en materia inmobiliaria y de construcción.
-                        </rs-layer><!--
-                        -->
-                    </rs-slide>
-
-                    <!-- SLIDE 3 - Asesoría en Financiamiento -->
-                    <rs-slide data-key="rs-5" data-title="financiamiento"
-                        data-anim="ei:d;eo:d;s:d;r:0;t:curtain-1;sl:d;">
-                        <img src="images/slider-handy-bg2.jpg"
-                            title="slider-handy-bg2" width="1920" height="935"
-                            data-parallax="off" class="rev-slidebg" data-no-retina>
-                        <!--
-                        --><rs-layer
-                            id="slider-1-slide-5-layer-33"
-                            data-type="text"
-                            data-color="#cacaca"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;xo:-2px,0,0,0;y:m;yo:-137px,-254px,-285px,-245px;"
-                            data-text="s:16,16,18,18;l:25,25,25,24;fw:600;a:inherit;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="sp:400;sR:10;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:5;font-family:Poppins;"
-                        >HABITTA CO.
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-5-layer-24"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;xo:-1px,0,0,0;y:m;yo:-93px,-181px,-223px,-181px;"
-                            data-text="s:53,70,62,38;l:61,80,70,46;ls:0,0px,0px,0px;a:left,left,center,left;"
-                            data-dim="w:auto,auto,720px,auto;"
-                            data-frame_0="y:38px;"
-                            data-frame_1="st:320;sp:400;sR:320;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:6;font-family:Poppins;"
-                        >Asesoría en
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-5-layer-35"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;y:m;yo:-25px,-81px,-128px,-115px;"
-                            data-text="s:70,70,62,38;l:80,80,70,46;fw:600;a:left,left,center,left;"
-                            data-dim="w:auto,auto,720px,auto;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="st:660;sp:400;sR:660;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:7;font-family:Poppins;"
-                        >Financiamiento
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-1-slide-5-layer-8"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:l,l,c,c;y:m;yo:82px,20px,-12px,-10px;"
-                            data-text="w:normal;s:22,22,22,20;l:36,36,36,35;fw:400,500,500,500;a:left,left,center,center;"
-                            data-dim="w:680px,857px,650px,450px;h:93px,auto,auto,auto;"
-                            data-frame_0="y:50px;"
-                            data-frame_1="st:1000;sp:400;sR:1000;"
-                            data-frame_999="st:w;sp:400;auto:true;"
-                            style="z-index:8;font-family:Poppins;"
-                        >Brindamos soluciones integrales de alta calidad en materia inmobiliaria y de construcción.
-                        </rs-layer><!--
-                        -->
-                    </rs-slide>
-
-                </rs-slides>
-            </rs-module>
-
-            <script type="text/javascript">
-                setREVStartSize({
-                    c: 'rev_slider_1_1',
-                    rl:  [1240, 1024, 778, 480],
-                    el:  [890,  920,  920, 820],
-                    gw:  [1170, 1024, 778, 480],
-                    gh:  [890,  920,  920, 820],
-                    type: 'standard',
-                    justify: '',
-                    layout: 'fullwidth',
-                    mh: "0"
-                });
-
-                var revapi1, tpj;
-
-                function revinit_revslider11() {
-                    jQuery(function () {
-                        tpj = jQuery;
-                        revapi1 = tpj("#rev_slider_1_1");
-                        if (revapi1 == undefined || revapi1.revolution == undefined) {
-                            console.warn("Revolution Slider: rev_slider_1_1 no pudo inicializarse.");
-                        } else {
-                            revapi1.revolution({
-                                sliderLayout: "fullwidth",
-                                duration: 5000,
-                                visibilityLevels: "1240,1024,778,480",
-                                gridwidth:  "1170,1024,778,480",
-                                gridheight: "890,920,920,820",
-                                perspective: 600,
-                                perspectiveType: "local",
-                                editorheight: "890,920,920,820",
-                                responsiveLevels: "1240,1024,778,480",
-                                shuffle: true,
-                                progressBar: { disableProgressBar: true },
-                                navigation: {
-                                    mouseScrollNavigation: false,
-                                    onHoverStop: false,
-                                    touch: { touchenabled: true },
-                                    arrows: {
-                                        enable: true,
-                                        style: "custom",
-                                        hide_onmobile: true,
-                                        hide_under: 768,
-                                        hide_onleave: true,
-                                        left:  {},
-                                        right: {}
-                                    }
-                                },
-                                parallax: {
-                                    levels: [5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
-                                    type: "mouse"
-                                },
-                                fallbacks: { allowHTML5AutoPlayOnAndroid: true }
-                            });
-                        }
-                    });
-                }
-
-                var once_revslider11 = false;
-                if (document.readyState === "loading") {
-                    document.addEventListener('readystatechange', function () {
-                        if ((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider11) {
-                            once_revslider11 = true;
-                            revinit_revslider11();
-                        }
-                    });
-                } else {
-                    once_revslider11 = true;
-                    revinit_revslider11();
-                }
-            </script>
-
-            <script type="text/javascript">
-                /* Arrow styles overrides */
-                var htmlDivCss = [
-                    "#rev_slider_1_1_wrapper .custom.tparrows {",
-                    "  cursor:pointer; background:rgba(0,0,0,0.5);",
-                    "  width:40px; height:40px; position:absolute; display:block; z-index:1000;",
-                    "}",
-                    "#rev_slider_1_1_wrapper .custom.tparrows:hover { background:rgba(170,183,48,0.9); }",
-                    "#rev_slider_1_1_wrapper .custom.tparrows:before {",
-                    "  font-family:'revicons'; font-size:15px; color:#fff;",
-                    "  display:block; line-height:40px; text-align:center;",
-                    "}",
-                    "#rev_slider_1_1_wrapper .custom.tparrows.tp-leftarrow:before  { content:'\\e824'; }",
-                    "#rev_slider_1_1_wrapper .custom.tparrows.tp-rightarrow:before { content:'\\e825'; }"
-                ].join("\n");
-                var htmlDiv = document.createElement("div");
-                htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-                document.getElementsByTagName("head")[0].appendChild(htmlDiv);
-            </script>
-        </rs-module-wrap>
-    </section>
-
-    <!-- =========================================================
-         STATS BAR
-    ========================================================= -->
-    <div class="stats-bar" aria-label="Estadísticas">
-        <div class="container">
-            <div class="stats-inner">
-                <div class="stat-item">
-                    <span class="stat-num">+5</span>
-                    <span class="stat-label">Años de experiencia</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">+200</span>
-                    <span class="stat-label">Clientes satisfechos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">+50</span>
-                    <span class="stat-label">Proyectos ejecutados</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">6</span>
-                    <span class="stat-label">Líneas de servicio</span>
-                </div>
-            </div>
-        </div>
+    <div class="about-images">
+      <img src="images/about1.jpg" />
+      <img src="images/about2.jpg" />
     </div>
+  </section>
 
-    <!-- =========================================================
-         ABOUT
-    ========================================================= -->
-    <section id="nosotros" class="about">
-        <div class="container">
-            <div class="about-inner">
-                <div class="about-image-col">
-                    <div class="about-img-frame">
-                        <img src="images/Foto-Para-Pagina-Habitta.png" alt="Equipo Habitta Co." class="about-photo">
-                        <div class="about-badge">
-                            <i class="fas fa-award"></i>
-                            <span>+5 años de trayectoria</span>
-                        </div>
-                    </div>
-                </div>
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container grid">
+      <div class="service">
+        <i class="fas fa-drafting-compass"></i>
+        <p>Diseño y construcción</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-truck"></i>
+        <p>Movimientos de tierra</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-city"></i>
+        <p>Urbanismo</p>
+      </div>
+    </div>
+  </section>
 
-                <div class="about-text-col">
-                    <span class="section-label">Acerca de Nosotros</span>
-                    <h2>Protegemos tu patrimonio con ética y profesionalismo</h2>
-                    <div class="accent-line"></div>
-                    <p class="about-lead">Somos una empresa colombiana enfocada en brindar soluciones integrales de alta calidad en materia inmobiliaria y de construcción.</p>
-                    <p>Nuestra misión es proteger el patrimonio de nuestros clientes mediante servicios confiables, personalizados y fundamentados en la integridad y la innovación.</p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Integridad y transparencia en cada proyecto</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Compromiso con la satisfacción del cliente</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Innovación en diseño y construcción</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Equipo profesional multidisciplinario</span>
-                        </div>
-                    </div>
-                    <a href="#contacto" class="btn-primary">
-                        <i class="fas fa-comments"></i> Hablar con un asesor
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <p>¡Te invitamos a conocer NOVAYANNA!</p>
+      <a href="#" class="btn-primary">Ver sitio web</a>
+    </div>
+  </section>
 
-    <!-- =========================================================
-         SERVICES
-    ========================================================= -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Lo que hacemos</span>
-                <h2>Nuestros Servicios</h2>
-                <div class="accent-line centered"></div>
-                <p class="section-sub">Ofrecemos un portafolio completo en construcción e inmobiliaria para satisfacer todas las necesidades de nuestros clientes.</p>
-            </div>
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contáctenos</h2>
+      <p>Déjanos tus datos y te contactaremos.</p>
+      <a href="#" class="btn-primary">Contactar</a>
+    </div>
+  </section>
 
-            <!-- 6 servicios principales -->
-            <div class="services-grid-6">
-                <div class="service-item">
-                    <div class="service-item-icon">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h3>Diseño y Construcción</h3>
-                    <p>Proyectos de construcción civil con altos estándares de calidad y cumplimiento.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-item-icon">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <h3>Saneamiento Básico</h3>
-                    <p>Sistemas de acueducto, alcantarillado y manejo integral de aguas residuales.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-item-icon">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <h3>Movimientos de Tierra</h3>
-                    <p>Excavaciones, cortes, rellenos y nivelación de terrenos para todo tipo de obra.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-item-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>Interventoría</h3>
-                    <p>Supervisión técnica, administrativa y financiera de proyectos de construcción.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-item-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <h3>Urbanismo</h3>
-                    <p>Diseño de vías, parcelaciones y planes urbanísticos integrales.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-item-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Gerencia de Proyectos</h3>
-                    <p>Planificación, dirección y control de proyectos desde la concepción hasta la entrega.</p>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Habitta Co</p>
+    </div>
+  </footer>
 
-            <!-- Categorías detalladas -->
-            <div class="services-cats">
-                <div class="service-cat-card">
-                    <div class="service-cat-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Diseño y Construcción</h3>
-                    <div class="service-cat-body">
-                        <ul class="service-list">
-                            <li><i class="fas fa-circle"></i> Interventoría de proyectos</li>
-                            <li><i class="fas fa-circle"></i> Diseño de vías y parcelaciones</li>
-                            <li><i class="fas fa-circle"></i> Saneamiento básico</li>
-                            <li><i class="fas fa-circle"></i> Movimientos de tierra</li>
-                            <li><i class="fas fa-circle"></i> Urbanismo</li>
-                            <li><i class="fas fa-circle"></i> Gerencia de proyectos</li>
-                        </ul>
-                        <a href="#contacto" class="btn-card">
-                            <i class="fas fa-arrow-right"></i> Solicitar información
-                        </a>
-                    </div>
-                </div>
-
-                <div class="service-cat-card service-cat-alt">
-                    <div class="service-cat-icon alt">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Administración Inmobiliaria</h3>
-                    <div class="service-cat-body">
-                        <ul class="service-list">
-                            <li><i class="fas fa-circle"></i> Venta, Compra y Arriendo</li>
-                            <li><i class="fas fa-circle"></i> Avalúos comerciales</li>
-                            <li><i class="fas fa-circle"></i> Asesoría en financiamiento</li>
-                            <li><i class="fas fa-circle"></i> Asesoría jurídica</li>
-                        </ul>
-                        <a href="#contacto" class="btn-card btn-card-alt">
-                            <i class="fas fa-arrow-right"></i> Solicitar información
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         PROYECTO DESTACADO - NOVAYANA
-    ========================================================= -->
-    <section id="proyectos" class="novayanna-hero">
-        <div class="novayanna-overlay"></div>
-        <div class="container novayanna-inner">
-            <div class="novayanna-content">
-                <span class="cta-tag">&#9670; Proyecto Destacado &#9670;</span>
-                <img src="images/Logo-Habitta-para-WEB-1.png" alt="Novayana" class="novayanna-logo">
-                <p>Un paraíso de oportunidades te espera. Conoce nuestra parcelación campestre con diseño moderno, espacios verdes y la mejor ubicación en el Valle del Cauca.</p>
-                <a href="https://www.habittaconstructora.com" target="_blank" rel="noopener" class="btn-cta">
-                    Conocer el proyecto <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         GALERÍA
-    ========================================================= -->
-    <section class="novayanna-gallery">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Nuestros Proyectos</span>
-                <h2>Galería de Obras</h2>
-                <div class="accent-line centered"></div>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item gallery-large">
-                    <img src="images/Foto-Para-Pagina-Habitta.png" alt="Proyecto Habitta Co.">
-                    <div class="gallery-caption">Proyecto Residencial</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/Foto-2-PAgina-Habitta.png" alt="Construcción Habitta Co.">
-                    <div class="gallery-caption">Diseño y Construcción</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/slider-construct-bg2.jpg" alt="Urbanismo Habitta Co.">
-                    <div class="gallery-caption">Urbanismo</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         CONTACTO
-    ========================================================= -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Estamos aquí para ayudarte</span>
-                <h2>Contáctenos</h2>
-                <div class="accent-line centered"></div>
-            </div>
-            <div class="contact-inner">
-
-                <!-- Info -->
-                <div class="contact-info-col">
-                    <h2>Habla con un asesor de Habitta Co.</h2>
-                    <div class="accent-line"></div>
-                    <p>Nuestro equipo está disponible para orientarte en tu proceso de compra, venta, arriendo o construcción.</p>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div>
-                                <strong>Teléfono</strong>
-                                <a href="tel:+573207462217">(+57) 320 746 2217</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <strong>Correo Electrónico</strong>
-                                <a href="mailto:comercial@habittaconstructora.com">comercial@habittaconstructora.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <strong>Ubicación</strong>
-                                <p>Kilometro 6, Vía el Paraíso,<br>Valle del Cauca / Colombia</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <strong>Horario de Atención</strong>
-                                <p>Lunes a Viernes: 8:00am – 6:00pm</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulario -->
-                <div class="contact-form-col">
-                    <form id="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="nombre">Nombre completo *</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">¿En qué podemos ayudarte?</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu consulta..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-full">
-                            <i class="fas fa-paper-plane"></i>
-                            <span class="btn-text">Enviar Datos</span>
-                        </button>
-                        <div id="form-message" class="form-message"></div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
-    <footer id="footer">
-        <div class="footer-main">
-            <div class="container">
-                <div class="footer-grid">
-
-                    <!-- Brand -->
-                    <div class="footer-brand">
-                        <div class="footer-logo-wrap">
-                            <img src="images/Logo-Habittaco-pequeno.png" alt="Habitta Co." class="footer-logo-icon">
-                            <span class="footer-logo-text">Habitta <span>Co.</span></span>
-                        </div>
-                        <p>Brindamos soluciones integrales de alta calidad en materia inmobiliaria y de construcción, protegiendo el patrimonio de nuestros clientes con integridad e innovación.</p>
-                        <div class="footer-social">
-                            <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://wa.me/573207462217" target="_blank" rel="noopener" aria-label="WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Contacto -->
-                    <div class="footer-col">
-                        <h4>Contacto</h4>
-                        <ul class="footer-contact-list">
-                            <li><i class="fas fa-phone-alt"></i><a href="tel:+573207462217">(+57) 320 746 2217</a></li>
-                            <li><i class="fas fa-envelope"></i><a href="mailto:comercial@habittaconstructora.com">comercial@habittaconstructora.com</a></li>
-                            <li><i class="fas fa-map-marker-alt"></i>Km 6, Vía el Paraíso, Valle del Cauca, Colombia</li>
-                            <li><i class="fas fa-clock"></i>Lun – Vie: 8:00am – 6:00pm</li>
-                        </ul>
-                    </div>
-
-                    <!-- Navegación -->
-                    <div class="footer-col">
-                        <h4>Navegación</h4>
-                        <ul class="footer-nav">
-                            <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
-                            <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
-                            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Servicios</a></li>
-                            <li><a href="#proyectos"><i class="fas fa-chevron-right"></i> Proyectos</a></li>
-                            <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contáctenos</a></li>
-                        </ul>
-                        <div class="footer-novayana-badge">
-                            <img src="images/Logo-Habitta-PNG-2022.png" alt="Habitta Co. Logo">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom bar -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-inner">
-                    <p>2020 &copy; Habitta Co. | <a href="#">Política de protección de datos</a></p>
-                    <p>Diseño web por <a href="#">Innoverzion</a></p>
-                </div>
-            </div>
-        </div>
-
-        <button id="back-to-top" aria-label="Volver arriba">
-            <i class="fas fa-chevron-up"></i>
-        </button>
-    </footer>
-
-    <!-- Script principal -->
-    <script src="js/script.js"></script>
+  <!-- JS -->
+  <script src="js/slider.js"></script>
 </body>
 </html>
