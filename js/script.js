@@ -1,5 +1,6 @@
 /* ============================================================
    HABITTA CO. - JavaScript Principal
+   (Revolution Slider 6.2.23 gestiona el slider principal)
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,13 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
 
-        // Back to top
         const backTop = document.getElementById('back-to-top');
         if (backTop) {
             backTop.classList.toggle('visible', window.scrollY > 400);
         }
 
-        // Active nav link
         updateActiveNav();
     };
 
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navMenu   = document.getElementById('nav-menu');
 
-    // Crear overlay dinámicamente
     const overlay = document.createElement('div');
     overlay.classList.add('nav-overlay');
     document.body.appendChild(overlay);
@@ -61,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     overlay.addEventListener('click', closeMenu);
 
-    // Cerrar al hacer clic en enlace
     navMenu.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
@@ -107,70 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --------------------------------------------------------
-       HERO SLIDER
-    -------------------------------------------------------- */
-    const slides     = document.querySelectorAll('.slide');
-    const dots       = document.querySelectorAll('.dot');
-    const prevBtn    = document.querySelector('.slide-prev');
-    const nextBtn    = document.querySelector('.slide-next');
-    let current      = 0;
-    let autoInterval = null;
-
-    const goTo = (index) => {
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('active');
-
-        current = (index + slides.length) % slides.length;
-
-        slides[current].classList.add('active');
-        dots[current].classList.add('active');
-    };
-
-    const startAuto = () => {
-        autoInterval = setInterval(() => goTo(current + 1), 5500);
-    };
-
-    const resetAuto = () => {
-        clearInterval(autoInterval);
-        startAuto();
-    };
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
-    }
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            goTo(parseInt(dot.dataset.index));
-            resetAuto();
-        });
-    });
-
-    // Swipe en móvil
-    let touchStartX = 0;
-    const sliderEl = document.querySelector('.hero-slider');
-
-    if (sliderEl) {
-        sliderEl.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-
-        sliderEl.addEventListener('touchend', (e) => {
-            const diff = touchStartX - e.changedTouches[0].screenX;
-            if (Math.abs(diff) > 50) {
-                goTo(diff > 0 ? current + 1 : current - 1);
-                resetAuto();
-            }
-        }, { passive: true });
-    }
-
-    startAuto();
-
-    /* --------------------------------------------------------
        BACK TO TOP
     -------------------------------------------------------- */
     const backTop = document.getElementById('back-to-top');
@@ -191,15 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const nombre  = form.querySelector('#nombre').value.trim();
-            const email   = form.querySelector('#email').value.trim();
+            const nombre = form.querySelector('#nombre').value.trim();
+            const email  = form.querySelector('#email').value.trim();
 
             if (!nombre || !email) {
                 showMsg('Por favor completa los campos requeridos.', 'error');
                 return;
             }
 
-            // Simular envío
             const submitBtn = form.querySelector('[type="submit"]');
             submitBtn.disabled = true;
             if (btnText) btnText.textContent = 'Enviando...';
@@ -226,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
        INTERSECTION OBSERVER - fade in on scroll
     -------------------------------------------------------- */
     const fadeEls = document.querySelectorAll(
-        '.service-card, .about-inner, .contact-inner, .stat-item, .about-badge'
+        '.service-item, .service-cat-card, .about-inner, .contact-inner, .stat-item, .about-badge, .gallery-item'
     );
 
     if ('IntersectionObserver' in window) {
